@@ -1,0 +1,16 @@
+{
+  "name": "metodo-clinica-estetica-6d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Método Clínica de Estética 6D — sistema local de operação de marketing para clínicas de estética. © 2026 — Todos os direitos reservados à titular.",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "cli": "node app/cli.js"
+  }
+}

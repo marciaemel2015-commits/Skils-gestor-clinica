@@ -1,0 +1,10 @@
+# Método Clínica de Estética 6D — nunca versionar dados de clínicas, pacientes ou credenciais
+data/
+secrets/
+logs/
+backups/
+uploads/
+*.env
+.env*
+node_modules/
+test/.tmp*/

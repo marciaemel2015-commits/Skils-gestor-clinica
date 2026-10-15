@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x6d" content="__SESSION_TOKEN__">
+  <title>Método 6D</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <strong>Método Clínica de Estética 6D</strong>
+      <span id="clinica-atual" class="sub"></span>
+    </div>
+    <nav class="acoes-topo">
+      <button type="button" id="btn-inicio" class="link">Início</button>
+      <button type="button" id="btn-trocar" class="link">Trocar clínica</button>
+    </nav>
+  </header>
+  <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+  <main id="app" tabindex="-1"></main>
+  <footer class="rodape">
+    <p id="copyright"></p>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

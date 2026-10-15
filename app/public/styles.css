@@ -1,0 +1,63 @@
+/* © 2026 — Método Clínica de Estética 6D. Todos os direitos reservados à titular. */
+:root {
+  --bg: #faf7f4; --card: #ffffff; --ink: #2b2523; --muted: #6f6461; --line: #e7dfd9;
+  --accent: #9a5b4f; --accent-ink: #ffffff; --ok: #2f7d4f; --warn: #a66a00; --bad: #b3261e; --soft: #f3ebe6;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1c1918; --card: #262221; --ink: #f2ece9; --muted: #b5aaa6; --line: #3a3432; --accent: #d39383; --accent-ink: #1c1918; --soft: #312b29; --ok: #6fcf97; --warn: #f2c94c; --bad: #ff8a80; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); }
+.topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: var(--card); position: sticky; top: 0; z-index: 2; }
+.marca { display: flex; flex-direction: column; }
+.sub { color: var(--muted); font-size: 14px; }
+.acoes-topo { display: flex; gap: 8px; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 26px; margin: 0 0 6px; }
+h2 { font-size: 20px; margin: 24px 0 8px; }
+h3 { font-size: 17px; margin: 16px 0 6px; }
+p { margin: 6px 0; }
+.muted { color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 12px 0; }
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 12px 0; }
+.opcao { text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; cursor: pointer; font: inherit; color: inherit; min-height: 84px; }
+.opcao:hover, .opcao:focus-visible { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.opcao strong { display: block; font-size: 16px; }
+.opcao span { color: var(--muted); font-size: 14px; }
+.opcao.sel { border-color: var(--accent); background: var(--soft); }
+button { font: inherit; }
+.btn { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px; padding: 10px 18px; cursor: pointer; font-weight: 600; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.sec { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn.perigo { background: var(--bad); color: #fff; }
+.link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 6px 8px; font-weight: 600; }
+.linha { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], textarea, select {
+  width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--bg); color: var(--ink);
+}
+textarea { min-height: 110px; resize: vertical; }
+label { display: block; font-weight: 600; margin: 12px 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.chip { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 9px 14px; cursor: pointer; color: inherit; }
+.chip.sel { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.progresso { height: 8px; background: var(--soft); border-radius: 999px; overflow: hidden; margin: 8px 0 4px; }
+.progresso > div { height: 100%; background: var(--accent); }
+.aviso { max-width: 860px; margin: 12px auto 0; padding: 12px 16px; border-radius: 10px; background: var(--soft); border: 1px solid var(--line); }
+.aviso.erro { border-color: var(--bad); color: var(--bad); }
+.aviso.ok { border-color: var(--ok); }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; border: 1px solid var(--line); }
+.tag.bloqueio, .tag.bloqueado, .tag.critica, .tag.candidato_pausa, .tag.reprovada, .tag.com_erro, .tag.erro_publicacao { color: var(--bad); border-color: var(--bad); }
+.tag.ajuste, .tag.ajustar, .tag.atencao, .tag.necessita_ajustes, .tag.em_revisao { color: var(--warn); border-color: var(--warn); }
+.tag.verificar, .tag.inconclusivo, .tag.rascunho, .tag.programada { color: var(--muted); }
+.tag.sem_alertas, .tag.meta, .tag.promissor, .tag.candidato_escala, .tag.ativa { color: var(--ok); border-color: var(--ok); }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 15px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; width: 34%; }
+pre { white-space: pre-wrap; background: var(--soft); padding: 14px; border-radius: 10px; font-size: 14px; overflow-x: auto; }
+ul.limpa { list-style: none; padding: 0; }
+ul.limpa li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.abas { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin: 12px 0; }
+.aba { background: none; border: 0; padding: 10px 14px; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; }
+.aba.sel { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.rodape { max-width: 860px; margin: 0 auto; padding: 16px; color: var(--muted); font-size: 12px; }
+@media (max-width: 560px) { .topo { flex-direction: column; align-items: flex-start; } th { width: 42%; } }
